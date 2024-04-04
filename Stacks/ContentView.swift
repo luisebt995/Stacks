@@ -15,15 +15,48 @@ struct ContentView: View {
                 Fighter(name: "Goku", power: 800, description: "Ultra Instinct", colorText: .white, colorBackground: .mint)
                 ZStack {
                     Fighter(name: "Vegeta", power: 700, description: "SSJ3", colorText: .black, colorBackground: Color(red: 237/255, green: 64/255, blue: 90/255))
-                    Text("Todo lo puedo en cristo que me fortalece")
+                    Text("Insecto")
                         .font(.system(.caption, design: .rounded))
                         .fontWeight(.medium)
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
                         .background(.yellow)
                         .offset(x: 0 , y: 50)
                 }
             }
             .padding(.horizontal, 5)
+            HStack {
+                ZStack {
+                    VStack{
+                        Image(systemName: "flag.2.crossed")
+                        Text("Vegeto")
+                            .font(.system(.title, design: .rounded))
+                            .foregroundColor(.white)
+                            .fontWeight(.black)
+                        Text("1000/1000")
+                            .font(.system(size: 12, weight: .medium, design: .rounded))
+                            .foregroundColor(.white)
+                        Text("Fusion")
+                            .font(.system(size: 12, weight: .medium, design: .rounded))
+                            .foregroundColor(.white)
+                        Text("Insecto")
+                            .font(.system(.caption, design: .rounded))
+                            .fontWeight(.medium)
+                            .foregroundColor(.black)
+                            .background(.yellow)
+                            .offset(x: 0 , y: 50)
+                    }
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 50, maxHeight: 100)
+                    .padding(30)
+                    .background(.purple)
+                    .cornerRadius(20)
+                    Text("Kayosama help me")
+                        .font(.system(.caption, design: .rounded))
+                        .fontWeight(.medium)
+                        .foregroundColor(.black)
+                        .background(.yellow)
+                        .offset(x: 0 , y: 50)
+                }
+            }.padding(.horizontal, 5)
         }
     }
 }
