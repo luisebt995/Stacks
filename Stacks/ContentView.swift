@@ -38,12 +38,6 @@ struct ContentView: View {
                         Text("Fusion")
                             .font(.system(size: 12, weight: .medium, design: .rounded))
                             .foregroundColor(.white)
-                        Text("Insecto")
-                            .font(.system(.caption, design: .rounded))
-                            .fontWeight(.medium)
-                            .foregroundColor(.black)
-                            .background(.yellow)
-                            .offset(x: 0 , y: 50)
                     }
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 50, maxHeight: 100)
                     .padding(30)
@@ -56,7 +50,9 @@ struct ContentView: View {
                         .background(.yellow)
                         .offset(x: 0 , y: 50)
                 }
-            }.padding(.horizontal, 5)
+            }
+            .padding(.horizontal, 5)
+            Spacer()
         }
     }
 }
@@ -69,20 +65,25 @@ struct ContentView_Previews: PreviewProvider {
 
 struct Header: View {
     var body: some View {
-        VStack(alignment: .center, spacing: 5){
-            Text("Choose")
-                .font(.system(.largeTitle, design: .rounded))
-                .foregroundColor(.purple)
-                .fontWeight(.black)
-            Text("your")
-                .font(.system(.largeTitle, design: .rounded))
-                .foregroundColor(.purple)
-                .fontWeight(.heavy)
-            Text("Fighter")
-                .font(.system(.largeTitle, design: .rounded))
-                .foregroundColor(.purple)
-                .fontWeight(.bold)
+        HStack {
+            VStack(alignment: .center, spacing: 5){
+                Text("Choose")
+                    .font(.system(.largeTitle, design: .rounded))
+                    .foregroundColor(.purple)
+                    .fontWeight(.black)
+                Text("your")
+                    .font(.system(.largeTitle, design: .rounded))
+                    .foregroundColor(.purple)
+                    .fontWeight(.heavy)
+                Text("Fighter")
+                    .font(.system(.largeTitle, design: .rounded))
+                    .foregroundColor(.purple)
+                    .fontWeight(.bold)
+            }
+            Spacer()
         }
+        .padding(.horizontal, 7)
+        .padding(.bottom, 30)
     }
 }
 
